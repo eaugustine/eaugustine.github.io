@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Icon Font Cheatsheet</title>
+  <link rel="shortcut icon" href="../favicon.ico" />
+	<!-- <script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  			crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"/>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.5/b-2.2.2/fh-3.2.2/r-2.2.9/sl-1.3.4/datatables.min.js"></script>
+  	<link rel="stylesheet" href="css/icon-styles.css">
+
+  	<script>
+		$(document).ready(function() {
+	    $('#icnTable').DataTable( {
+	    		"fixedHeader": true,
+	        "ajax": "icon-list.json",
+	        "bPaginate": false,
+	        "dom": '<"top"fi>rt',
+	        "order": [[ 4, "asc" ]],
+	        "rowDefs": [
+						{ "sClass": "header-row", "aTargets": [ 0 ] }
+			],
+	        "columnDefs": [
+						{ "sClass": "code", "aTargets": [ 1 ] },
+						{ "sClass": "icon-column", "aTargets": [ 0 ] }
+			],
+	        "columns": [
+	        	{ "data": "Icon", render: function (data, type, row) {
+	        					return '<button class="ico-btn icon-font" data-clipboard-text="' + data + '">&#x' + row.Unicode + ';</button>';
+	        			}},
+	          { "data": "Class" },
+	          //This replaces the "/" in the Keywords column with commas 'cuz the slashes annoy me
+	          { "data": "Keywords", render: function (data, type, row) {
+		                data = data.replace(/ \/ /g, ', ');
+		                return data;
+		               }
+		            },
+		        { "data": "Used For" },
+	          { "data": "Category" },
+	          { "data": "Unicode" }
+	        ]
+	 } );
+	} );
+    </script>
+</head>
+<body>
+	<p id="top">Click on an icon to copy the glyph to your clipboard. You must have the icon font <a href="https://brand.davita.com/#module-iconography">installed</a> in order to view the icons you paste into your preferred authoring application. <span style="color:#636363; font-size:.85em">v1.20</span></p>
+
+<main>
+<table id="icnTable" class="display">
+	<thead>
+		<tr>
+			<th>Icon</th>
+			<th>CWOW Class</th>
+			<th>Description/Keywords</th>
+			<th>Used For</th>
+			<th>Category</th>
+			<th>Unicode</th>
+		</tr>
+	</thead>
+</table>
+
+<!-- Back to Top link -->
+  <div class="back-to-top-wrapper">
+    <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
+  </div>
+</main>
+
+
+<script>
+$('.ico-btn').tooltip({
+  trigger: 'click',
+  placement: 'bottom',
+  container: 'body'
+});
+
+function setTooltip(btn, message) {
+  $(btn).tooltip('dispose')
+    .attr('data-original-title', message)
+    .tooltip('show');
+}
+
+function hideTooltip(btn) {
+  setTimeout(function() {
+    $(btn).tooltip('dispose');
+  }, 1000);
+}
+
+var clipboard = new ClipboardJS('.ico-btn');
+
+clipboard.on('success', function(e) {
+  e.clearSelection();
+  setTooltip(e.trigger, 'Copied!');
+  hideTooltip(e.trigger);
+});
+
+clipboard.on('error', function(e) {
+  e.clearSelection();
+  setTooltip(e.trigger, 'Failed!');
+  hideTooltip(e.trigger);
+});
+</script>
+
+
+</body>
+
+</html>

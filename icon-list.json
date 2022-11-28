@@ -433,7 +433,7 @@
     "Unicode": "E009"
   },
   {
-    "Icon": "__",
+    "Icon": "🗏",
     "Class": "dvi dvi-document-blank",
     "Keywords": "Document / Paper / Page / PDF",
     "Used For": "",
@@ -985,7 +985,7 @@
     "Unicode": "FF0B"
   },
   {
-    "Icon": "__",
+    "Icon": "🖨",
     "Class": "dvi dvi-print",
     "Keywords": "Print / Printer",
     "Used For": "Print buttons",
@@ -1569,7 +1569,7 @@
     "Unicode": "E162"
   },
   {
-    "Icon": "__",
+    "Icon": "👁",
     "Class": "",
     "Keywords": "Eye / Eyelashes / Eyelid / Blink / Closed / Sleep",
     "Used For": "",
@@ -4993,7 +4993,7 @@
     "Unicode": "E235"
   },
   {
-    "Icon": "__",
+    "Icon": "🏆",
     "Class": "",
     "Keywords": "Trophy / Award",
     "Used For": "",
@@ -5369,7 +5369,7 @@
     "Unicode": "E706"
   },
   {
-    "Icon": "__",
+    "Icon": "🍨",
     "Class": "",
     "Keywords": "Ice Cream Cone / Sorbet",
     "Used For": "",
@@ -5401,7 +5401,7 @@
     "Unicode": "E687"
   },
   {
-    "Icon": "__",
+    "Icon": "🍩",
     "Class": "",
     "Keywords": "Donut",
     "Used For": "",
@@ -5641,7 +5641,7 @@
     "Unicode": "E262"
   },
   {
-    "Icon": "__",
+    "Icon": "🏥",
     "Class": "",
     "Keywords": "Hospital / Clinic / Building",
     "Used For": "",
@@ -6873,7 +6873,7 @@
     "Unicode": "E011"
   },
   {
-    "Icon": "__",
+    "Icon": "🎈",
     "Class": "",
     "Keywords": "Balloon",
     "Used For": "",
@@ -6881,7 +6881,7 @@
     "Unicode": "1F388"
   },
   {
-    "Icon": "__",
+    "Icon": "🎓",
     "Class": "",
     "Keywords": "Graduation Cap",
     "Used For": "",
@@ -8145,7 +8145,7 @@
     "Unicode": 2260
   },
   {
-    "Icon": "__",
+    "Icon": "󢗭",
     "Class": "",
     "Keywords": "Square / Block / Legend / Graph",
     "Used For": "",
@@ -8153,7 +8153,7 @@
     "Unicode": "E25ED"
   },
   {
-    "Icon": "__",
+    "Icon": "󢗮",
     "Class": "",
     "Keywords": "Circle / Legend / Graph",
     "Used For": "",
@@ -8161,7 +8161,7 @@
     "Unicode": "E25EE"
   },
   {
-    "Icon": "__",
+    "Icon": "󢗯",
     "Class": "",
     "Keywords": "Circle / Legend / Graph",
     "Used For": "",
@@ -8169,7 +8169,7 @@
     "Unicode": "E25EF"
   },
   {
-    "Icon": "__",
+    "Icon": "🚫",
     "Class": "",
     "Keywords": "Status / Declined",
     "Used For": "",
@@ -9825,7 +9825,7 @@
     "Unicode": "E348"
   },
   {
-    "Icon": "__",
+    "Icon": "🦎",
     "Class": "",
     "Keywords": "Snappy / Alligator / Crocodile / Gator",
     "Used For": "Reports, indicates Snappy data",
